@@ -18,15 +18,11 @@ class Cards():
         self.Suits = list(self.String_suits)
         self.Ranks = list(self.String_ranks)
         self.Value = list(self.String_values)
-        self.Values = {'Two': 2, 'Three': 3, 'Four': 4, 'Five': 5, 'Six': 6, 'Seven': 7, 'Eight': 8, 'Nine': 9,
-                  'Jack': 10,
-                  'King': 10, 'Queen': 10, 'Ace': 11}
+        self.Values = {'Two': 2, 'Three': 3, 'Four': 4, 'Five': 5, 'Six': 6, 'Seven': 7, 'Eight': 8, 'Nine': 9, 'Jack': 10, 'King': 10, 'Queen': 10, 'Ace': 11}
 
     def __str__(self):
         random.shuffle(self.Suits)
         random.shuffle(self.Value)
         return ' {} of {} '.format(self.Values[self.Value[0]] , self.Suits[0])
 
-
-card = Cards()
-print(card)
+car=Cards()
