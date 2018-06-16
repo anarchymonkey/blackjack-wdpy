@@ -1,5 +1,5 @@
 # blackjack-wdpy
-Black-Jack Game using sude python remote package making
+Black-Jack Game using sudo python remote package making
 
 First Trial At A Black Jack using user made remote packages of all classes.
 
