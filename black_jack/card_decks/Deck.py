@@ -3,10 +3,11 @@ docstring : This class is for the deck
 
 """
 from random import shuffle
-import card_classes.card_class
+from  card_classes.card_class import Cards
 
 
-class Deck(card_classes.card_class.Cards):
+
+class Deck():
     deck = []
 
     def __init__(self):
@@ -16,21 +17,18 @@ class Deck(card_classes.card_class.Cards):
        deck:var
 
        """
-        card_classes.card_class.Cards.__init__(self)  # initialized the class Cards from Package card_Classes
 
-        shuffle(card_classes.card_class.car.Suits)
         """
        Docstring: Shuffling all the suits
        random:imports
        """
 
-        for suit in card_classes.card_class.car.Suits:
+        for suit in Cards.String_suits:
 
             """
             Docstring: For loop to generate through the suits and ranks
             
             """
-            shuffle(card_classes.card_class.car.Ranks)
 
             """
             
@@ -39,14 +37,14 @@ class Deck(card_classes.card_class.Cards):
             
             
             """
-            for rank in card_classes.card_class.car.Ranks:
+            for rank in Cards.String_ranks:
                 """
                 
                 
                 Docstring: appending the suits and ranks of class Cards to this init 
                 
                 """
-                self.deck.append(rank + " of " + suit)
+                self.deck.append(Cards(suit, rank))
 
             """
             
@@ -73,9 +71,17 @@ class Deck(card_classes.card_class.Cards):
         """
 
         deck upto 2 :return:
-        """
 
-        return self.deck[:2:]
+        """
+        Single_card=self.deck.pop()
+        return Single_card
+
+    def __str__(self):
+        deck_comp=" "
+        for card in self.deck:
+            deck_comp += '\n' + card.__str__()
+
+        return  "The deck has : " + deck_comp
 
 
 """
@@ -83,12 +89,10 @@ class Deck(card_classes.card_class.Cards):
 docstring: Minor Error Testing by calling the values
 """
 
-D = Deck()
-D.shuffle_cards()
 
-DEALT_CARDS = D.deal_cards()
-print(DEALT_CARDS)
-
+#print(D)
+"""
 DEAL_1 = str(DEALT_CARDS[0]).split(' ')[0]
 DEAL_2 = str(DEALT_CARDS[1]).split(' ')[0]
 print(card_classes.card_class.car.Values[DEAL_1] + card_classes.card_class.car.Values[DEAL_2])
+"""

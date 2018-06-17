@@ -1,10 +1,9 @@
 """
 imports:keyword
 """
-import card_decks
-import card_classes
-import card_classes.card_class
-import card_decks.Deck
+from  card_classes.card_class import Cards
+from card_decks.Deck import Deck
+from random import shuffle
 
 class Hands():
     '''
@@ -16,19 +15,36 @@ class Hands():
         cards,values,aces:keyword
         aces ( 1 - 11) :returns
         """
-    def card_add(self):
+        self.cards = []
+        self.value = 0
+        self.aces = 0
+
+    def card_add(self,card):
         """
 
         cards:return:
         """
-
-
+        self.cards.append(card)
+        self.value += Cards.Values[card.rank]
+        if card.String_ranks == 'Ace':
+            self.aces += 1
 
     def ace_adjust(self):
         """
 
         aces:return:
         """
+
+test_deck = Deck()
+test_deck.shuffle_cards()
+test_player = Hands()
+test_player.card_add(test_deck.deal_cards())
+test_player.card_add(test_deck.deal_cards())
+print(test_player.value)
+
+
+
+
 
 
 
