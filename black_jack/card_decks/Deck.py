@@ -89,8 +89,8 @@ class Deck():
 docstring: Minor Error Testing by calling the values
 """
 
-
-#print(D)
+D=Deck()
+print(D)
 """
 DEAL_1 = str(DEALT_CARDS[0]).split(' ')[0]
 DEAL_2 = str(DEALT_CARDS[1]).split(' ')[0]
