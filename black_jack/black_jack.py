@@ -22,13 +22,32 @@ def hit_or_stand():
 
 
 
-def show_sime():
+def show_some():
     pass
 
 
 
 def show_all():
     pass
+
+
+def player_busts():
+    pass
+
+def player_wins():
+    pass
+
+def dealer_busts():
+    pass
+    
+def dealer_wins():
+    pass
+    
+def push():
+    pass
+
+if __name__ == "__main__":
+
 
 
 
